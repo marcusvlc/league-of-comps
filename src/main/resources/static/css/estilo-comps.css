@@ -1,0 +1,43 @@
+#blocos-comps {
+
+   outline: 1px solid #000;
+	float: left;
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	margin-left: 5%;
+	margin-top: 5%;
+	word-wrap: break-word;
+	text-align: center;
+	overflow: scroll;
+}
+#botao-ccomp{
+	margin-left: 40%;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 80px;
+}
+
+p {
+	text-align: center;
+	color: gray;
+}
+
+#modal1  {
+	text-align: center;
+}
+
+#modal1 h4{
+	font-family: 'Anton', sans-serif;
+	font-size: 40px;
+}
+
+.camposModal{
+	float: left;
+	display: inline;
+}
+
+

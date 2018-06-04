@@ -1,0 +1,96 @@
+ <link rel="stylesheet" type="text/css" href="css/estilo-comps.css">
+ <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <meta charset="UTF-8">
+ <script>
+ 	$(function(){
+ 		$('#modal1').modal();
+ 	})
+ </script>
+
+<div >
+
+
+<h1>→ Suas Composições ←</h1>
+<p>Aqui estão listadas suas composições, você poderá adicionar, remover ou alterá-las.</p>
+<a id="botao-ccomp" ng-click="abrirModalComps()" class="btn blue"><i class="material-icons left">brush</i>Adicionar Composição</a>
+
+<div>
+	
+	<div ng-repeat="comps in user.composicoes" class="container" id="blocos-comps">
+	 <a>Título da Composição:</a>
+	 <h4>{{comps.titulo}}</h4>
+
+	 <ul class="collection with-header">
+        <li class="collection-header"><a>Campeões da Composição:</a>
+        <li class="collection-item"><div>TOP: {{comps.campeoes[0]}}<a  class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                <li class="collection-item"><div>JG: {{comps.campeoes[1]}}<a  class="secondary-content"><i class="material-icons">send</i></a></div></li>
+        <li class="collection-item"><div>MID: {{comps.campeoes[2]}}<a  class="secondary-content"><i class="material-icons">send</i></a></div></li>
+        <li class="collection-item"><div>ADC: {{comps.campeoes[3]}}<a  class="secondary-content"><i class="material-icons">send</i></a></div></li>
+   	 <li class="collection-item"><div>SUP: {{comps.campeoes[4]}}<a  class="secondary-content"><i class="material-icons">send</i></a></div></li>
+        
+      </ul>
+            
+	 
+	 
+	 <a>Descrição da Composição</a>
+	 <p>{{comps.descricao}}</p>
+	 
+	 <a>Ação</a>
+	 <br/>
+	  <br/>
+<a ng-click="deletarComp(comps)" class="btn red"><i class="material-icons left">delete</i>Deletar Composição</a>
+
+	 
+	</div>
+
+
+</div>
+
+</div>
+
+
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Adicionar nova Composição</h4>
+      <br/>
+      <form>
+      	<a>Insira o título da composição</a>
+      	<input type="text" required="required" ng-model="titulo">
+      	
+      	      	<a>Insira uma descrição para a composição</a>
+      	<input type="text" required="required" ng-model="descricao">
+      	
+      	      	<a>Insira o nome do campeão da rota superior</a>
+      	<input type="text" required="required" ng-model="top">
+      	
+      	      	<a>Insira o nome do campeão da rota da selva</a>
+      	<input type="text" required="required" ng-model="jg">
+      	
+      	      	<a>Insira o nome do campeão da rota do meio</a>
+      	<input type="text" required="required" ng-model="mid">
+      	
+      	      	<a>Insira o nome do campeão da rota inferior</a>
+      	<input type="text" required="required" ng-model="adc">
+      	
+      	      	<a>Insira o nome do campeão suporte</a>
+      	<input type="text" required="required" ng-model="sup">
+      	
+      	
+      
+      </form>
+      
+      
+    </div>
+    <div class="modal-footer">
+      <a onclick="$('#modal1').modal('close');" class="waves-effect waves-light btn red"><i class="material-icons right">arrow_back
+</i>Fechar</a>
+	<a ng-click="cadastrarComposicao(titulo, descricao, top, mid, jg, adc, sup)" class="waves-effect waves-light btn"><i class="material-icons right">add_circle</i>Cadastrar Composição</a>
+
+    </div>
+  </div>
+
+

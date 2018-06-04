@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="css/estilo-registro.css">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+ <meta charset="UTF-8">
+
+<h1>Registre-se aqui!</h1>
+
+<div class="registroBox">
+
+
+	  		<h3>Insira seu e-mail:</h3>
+		
+		
+	<div >
+    <form class="col s12">
+      <div class="campos">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input ng-model="email" id="icon_prefix" type="email" class="validate">
+          <label for="icon_prefix">E-mail</label>
+        </div>
+        	
+        		<h3>Insira sua senha:</h3>
+        
+
+        <div class="campos">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">enhanced_encryption</i>
+          <input ng-model="senha" id="icon_telephone" type="password" class="validate">
+          <label for="icon_telephone">Senha</label>
+        </div>
+        </div>
+        
+        	<h3>Insira sua senha novamente:</h3>
+        
+       <div class="campos">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">beenhere</i>
+          <input ng-model="resenha" id="beenhere" type="password" class="validate">
+          <label for="beenhere">Senha novamente</label>
+        </div>
+        </div>
+        
+          <button ng-click="cadastrarUsuario(email, senha, resenha)" class="btn waves-effect waves-light" type="submit" name="action">Registrar
+    <i class="material-icons right">send</i>
+  </button>
+  
+  		<p>Já possui registro? <a href="#!/login">Entre aqui</a></p>
+      </div>
+    </form>
+  </div>
+
+
+
+</div>

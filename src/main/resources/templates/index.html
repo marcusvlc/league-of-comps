@@ -1,5 +1,5 @@
   <!DOCTYPE html>
-  <html lang="pt-br">
+  <html lang="pt-br" ng-app="moduloPrincipal">
     <head>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,40 +11,40 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="UTF-8">
       
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+          
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular-ui-router.js"></script>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/module.js"></script>
+      <script type="text/javascript" src="js/userController.js"></script>
+       <script type="text/javascript" src="js/rotas.js"></script>
+       <script type="text/javascript" src="js/loginController.js"></script>
+       <script type="text/javascript" src="js/interceptor/token-interceptor.js"></script>
+       <script type="text/javascript" src="js/compsController.js"></script>
+
+      
+      <title>League of Comps</title>
     </head>
 
-    <body>
+    <body ng-controller="usuarioController">
         <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Inicio</a>
+      <a href="#" class="brand-logo"> League of Comps</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="">Login</a></li>
-        <li><a href="">Registrar</a></li>
-        <li><a href="">Contato</a></li>
+        <li><a href="#!/login">Entrar</a></li>
+        <li><a href="#!/registrar">Registrar</a></li>
+        <li><a href="#!/comps">Composicoes</a></li>
 
       </ul>
     </div>
   </nav>
   
-  	<div id = "elementosPrincipais">
-        
-           <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Entre e monte sua composição!</a>
-
-	   	<div class="slider">
-	   	   <h1>League of Comps</h1>
-	   	</div>
-
-        </div>
-        
-
-			
-
-
-  
+ <ui-view></ui-view>
   
         <div class="blocosPrincipais">
         
@@ -82,7 +82,7 @@
         </div>
         
         
-        <div id="rodape">
+   <div id="rodape">
       <footer class="page-footer">
           <div class="container">
             <div class="row">

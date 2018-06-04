@@ -7,7 +7,7 @@ body {
 }
 nav {
     background-color:#b71c1c ;
- }
+}
  
  .page-footer {
  	background-color:#b71c1c;
@@ -23,6 +23,17 @@ nav {
 	background-size: 100% 450px;
 
 }
+
+.slider h1 {
+	transition: all .2s ease-in-out;
+}
+
+.slider h1:hover {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+
 
 
 
@@ -61,7 +72,6 @@ nav {
 .blocosPrincipais { 
 	
 	width: 100%;
-
 	margin-bottom: 70px;
 	margin-top: 70px;
 	display: inline-block;
@@ -75,6 +85,10 @@ nav {
 	background-color: white;
 	height: 300px;
 	word-wrap: break-word;
+}
+
+.bloco:hover {
+	color:blue;
 }
 
 .bloco p {
@@ -115,4 +129,20 @@ nav {
 #fotoPrincipal {
 
 	width: 100%;
+}
+
+
+.registroBox {
+   width: 900px;
+   height: 450px;
+   outline: 1px solid #000;
+   position: relative;
+   left: 50%;
+   margin-left: -450px;
+   margin-top: 50px;
+   text-align: center;
+}
+
+.brand-logo {
+	margin-left: 10px !important;
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.servlet.ServletException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +26,7 @@ public class LoginController {
 	UsuarioRepositorio usuarioRep;
 	
 	@PostMapping("/autenticar")
-	public LoginResponse autenticar(@RequestBody Usuario usuario) throws Exception {
+	public ResponseEntity<LoginResponse> autenticar(@RequestBody Usuario usuario) throws Exception {
 		if(usuario.getEmail().equals(null) || usuario.getSenha().equals(null)) {
 			throw new ServletException("Email e senha são obrigatórios para autenticação");
 		}
@@ -45,16 +46,17 @@ public class LoginController {
 				
 				System.out.println(token);
 			} else {
-				throw new ServletException("Dados incorretos");
+				return new ResponseEntity<LoginController.LoginResponse>(HttpStatus.BAD_REQUEST);
+
 			}
 			
 			
 			
 		} else {
-			throw new ServletException("Usuario nao encontrado!");
+			return new ResponseEntity<LoginController.LoginResponse>(HttpStatus.NOT_FOUND);
 		}
 
-		return new LoginResponse(token);
+		return new ResponseEntity<LoginController.LoginResponse>(new LoginResponse(token), HttpStatus.ACCEPTED);
 	}
 	
 	private class LoginResponse {

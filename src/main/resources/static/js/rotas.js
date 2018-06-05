@@ -13,7 +13,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
           name: 'login',
           url: '/login',
           templateUrl: 'paginas/login.html',
-          controller: 'usuarioController',
+          controller: 'loginController',
         };
 
        	var registerState = {
@@ -29,6 +29,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'paginas/comps.html',
           controller: 'compsController',
         };
+         
+         
+         var logadoState = {
+                 name: 'logado',
+                 url: '/logado',
+                 templateUrl: 'paginas/logado.html',
+                 controller: 'usuarioController',
+               };
+
 
         $stateProvider.state(homeState);
         $stateProvider.state(loginState);

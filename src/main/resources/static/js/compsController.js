@@ -1,6 +1,8 @@
 app.controller("compsController", function($scope, $http, $location){
 	
 	$scope.urlServer = "http://comps-comps.a3c1.starter-us-west-1.openshiftapps.com";
+	//$scope.urlServer = "http://localhost:8080";
+
 	$scope.user = {};
 	$scope.user = JSON.parse(localStorage.getItem("userInfo"));
 

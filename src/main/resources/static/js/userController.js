@@ -1,6 +1,6 @@
 app.controller("usuarioController", function($scope, $http, $location){
 	$scope.titulo = "League of Comps";
-	$scope.urlServer = "http://compsfinal-compsfinal.a3c1.starter-us-west-1.openshiftapps.com";
+	$scope.urlServer = "https://leagueofcomps.herokuapp.com";
 //	$scope.urlServer = "http://localhost:8080";
 
 		

@@ -1,5 +1,5 @@
 app.controller("loginController", function($scope, $http, $location){
-	$scope.urlServer = "http://compsfinal-compsfinal.a3c1.starter-us-west-1.openshiftapps.com";
+	$scope.urlServer = "https://leagueofcomps.herokuapp.com";
 	$scope.token = "";
 //	$scope.urlServer = "http://localhost:8080";
 

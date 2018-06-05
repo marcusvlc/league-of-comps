@@ -1,5 +1,5 @@
 app.controller("loginController", function($scope, $http, $location){
-	$scope.urlServer = "http://localhost:8080";
+	$scope.urlServer = "http://comps-comps.a3c1.starter-us-west-1.openshiftapps.com";
 	$scope.token = "";
 	
 	$scope.autenticar = function(email, senha) {
